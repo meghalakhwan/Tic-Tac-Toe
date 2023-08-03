@@ -1,0 +1,25 @@
+html, body{
+    min-height: 100vh;
+
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+.container-fluid{
+    flex: 1 0 auto;
+}
+
+.main-box{
+    margin-top: -5px;
+    width: 420px;
+    box-shadow: 1px 1px 20px 5px #cccccc, -1px, -1px, 20px, 5px #cccccc;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-box ul{
+    font-size: 100%;
+}
