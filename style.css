@@ -23,3 +23,12 @@ body{
 .main-box ul{
     font-size: 100%;
 }
+
+footer{
+    margin-top: 20px;
+    flex-shrink: 0;
+    padding: 20px 0 20px 0;
+    color: #ffffff;
+    background-color: rgba(34, 39, 39, .9);
+    font-size: 1.15em;
+}
