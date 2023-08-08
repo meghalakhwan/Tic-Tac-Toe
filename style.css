@@ -32,3 +32,13 @@ footer{
     background-color: rgba(34, 39, 39, .9);
     font-size: 1.15em;
 }
+
+.box{
+    font-family: 'Permanent Marker' , cursive;
+    background-color: #ebebeb;
+    font-size: 500%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.5px solid #585858;
+}

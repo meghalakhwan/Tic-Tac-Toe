@@ -55,5 +55,42 @@ function resetBoard(winner)
     }
 
     state.squares = Array(9).fill(null)
-    document.getElementById
+    document.getElementById("player1Score").text(state.scores.player1)
+    document.getElementById("player2Score").text(state.scores.player2)
+    renderBoard();
 }
+
+function showWinner(winner)
+{
+    const alert_box = document.getElementById("alert-box")
+    if(winner)
+    {
+        if(winner === 'X')
+        {
+            winner = "Player 1"
+        }
+        else
+        {
+            winner = "Player 2"
+        }
+    
+
+    alert_box.html(`${winner}<strong> Won!</strong>`)
+    }
+    else
+    {
+        alert_box.html(`It's a Draw!`);
+    }
+    alert_box.slideDown();
+    setTimeout(() => alert_box.slideUp(), 1000)
+}
+
+function renderSquare(index)
+{
+    const val = state.squares[index] ? state.squares[index] : "&nbsp;"
+    return `<div value = ${index} class = "box col-lg-4 col-md-4 col-sm-4 col-xs-4" onclick="boxClick(${index})">${val}</div>`
+}
+
+
+
+
