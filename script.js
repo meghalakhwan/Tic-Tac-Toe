@@ -44,14 +44,7 @@ function resetBoard(winner)
 {
     if(winner)
     {
-        if(winner === 'X')
-        {
-            state.scores.player1++
-        }
-        else
-        {
-            state.scores.player2++
-        }
+        winner === 'X' ? state.scores.player1++ : state.scores.player2++;
     }
 
     state.squares = Array(9).fill(null);
@@ -66,14 +59,7 @@ function showWinner(winner)
     const alert_box = $("#alert-box")
     if(winner)
     {
-        if(winner === 'X')
-        {
-            winner = "Player 1"
-        }
-        else
-        {
-            winner = "Player 2"
-        }
+        winner = winner === 'X' ? 'Player 1' : 'Player 2';
     
 
     alert_box.html(`${winner}<strong> Won!</strong>`)
@@ -97,7 +83,7 @@ function renderBoard()
     let board_html = ''
     for(let i=0; i<9; i++)
     {
-        board_html += renderSquare(i)
+        board_html += renderSquare(i);
     }
     $("#board").html(board_html);
     calculateWinner(state.squares)
@@ -113,7 +99,7 @@ function boxClick(index)
         return;
      }
 
-     squares[index] = state.xIsNext ? 'X' : '0'
+     squares[index] = state.xIsNext ? 'X' : '0';
      state.squares = squares;
      state.xIsNext = !state.xIsNext;
      renderBoard();

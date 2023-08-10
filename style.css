@@ -42,3 +42,11 @@ footer{
     align-items: center;
     border: 0.5px solid #585858;
 }
+
+.controls{
+    padding: 5px;
+}
+
+.controls a{
+    font-size: 100% !important;
+}
