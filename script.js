@@ -89,8 +89,6 @@ function renderBoard()
     calculateWinner(state.squares)
 }
 
-
-
 function boxClick(index)
 {
     const squares = state.squares;
@@ -103,7 +101,6 @@ function boxClick(index)
      state.squares = squares;
      state.xIsNext = !state.xIsNext;
      renderBoard();
-
 }
 
 function resetGame(){
@@ -111,8 +108,6 @@ function resetGame(){
     state.scores.player2 = 0
     resetBoard(null);
 }
-
-
 
 $(() => {
     renderBoard();
