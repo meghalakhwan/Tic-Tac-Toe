@@ -108,7 +108,6 @@ function resetGame(){
     state.scores.player2 = 0
     resetBoard(null);
 }
-
 $(() => {
     renderBoard();
     $("#alert-box").slideUp(0.0001);
